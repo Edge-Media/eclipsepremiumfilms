@@ -836,7 +836,7 @@ figcaption {
   height: 100%;
   position: absolute;
   top: 0;
-  right: -44px;
+  right: -40px;
 }
 
 .about-counter-title {
@@ -2581,10 +2581,6 @@ figcaption {
     grid-row-gap: 50px;
   }
 
-  .client-decoration-two {
-    right: -13px;
-  }
-
   .about-counter-title {
     font-size: 22px;
   }
@@ -2910,12 +2906,11 @@ figcaption {
   }
 
   .client-decoration-one {
-    top: -24px;
-    left: -44px;
+    left: -60px;
   }
 
   .client-decoration-two {
-    right: -50px;
+    right: -60px;
   }
 
   .about-content {
