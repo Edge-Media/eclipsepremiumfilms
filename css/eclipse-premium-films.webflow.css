@@ -823,18 +823,20 @@ figcaption {
   background-color: var(--color--black);
   filter: blur(10px);
   width: 80px;
-  height: 80px;
+  height: 100%;
   position: absolute;
-  inset: -20px auto auto -40px;
+  top: 0;
+  left: -40px;
 }
 
 .client-decoration-two {
   background-color: var(--color--black);
   filter: blur(10px);
   width: 80px;
-  height: 80px;
+  height: 100%;
   position: absolute;
-  inset: -20px -44px auto auto;
+  top: 0;
+  right: -44px;
 }
 
 .about-counter-title {
@@ -2574,11 +2576,6 @@ figcaption {
     grid-template-columns: 1fr;
   }
 
-  .client-section {
-    padding-top: 40px;
-    padding-bottom: 40px;
-  }
-
   .client-marquee-list, .client-marquee-item {
     grid-column-gap: 50px;
     grid-row-gap: 50px;
@@ -2897,6 +2894,11 @@ figcaption {
 
   .hero-form-wrap {
     padding: 15px;
+  }
+
+  .client-section {
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 
   .client-logo {
