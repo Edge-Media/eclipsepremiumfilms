@@ -2831,6 +2831,8 @@ figcaption {
   }
 
   .grid-nav {
+    grid-column-gap: 40px;
+    grid-row-gap: 40px;
     grid-template-columns: 1fr .5fr;
   }
 
