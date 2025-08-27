@@ -49,6 +49,22 @@
   display: grid;
 }
 
+.w-embed-youtubevideo {
+  background-image: url('https://d3e54v103j8qbb.cloudfront.net/static/youtube-placeholder.2b05e7d68d.svg');
+  background-position: 50%;
+  background-size: cover;
+  width: 100%;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  position: relative;
+}
+
+.w-embed-youtubevideo:empty {
+  min-height: 75px;
+  padding-bottom: 56.25%;
+}
+
 .w-backgroundvideo-backgroundvideoplaypausebutton:focus-visible {
   outline-offset: 2px;
   border-radius: 50%;
@@ -1094,10 +1110,6 @@ figcaption {
   display: flex;
 }
 
-.testimonial-item.one {
-  margin-top: 80px;
-}
-
 .rating-image {
   object-fit: cover;
   height: 20px;
@@ -1134,11 +1146,11 @@ figcaption {
   justify-content: space-between;
   width: 100%;
   height: 100%;
-  padding-bottom: 180px;
+  padding-bottom: 100px;
 }
 
 .testimonial-slider-wrapper {
-  height: 100%;
+  margin-top: 40px;
   margin-left: auto;
   margin-right: auto;
   display: flex;
@@ -1581,10 +1593,19 @@ figcaption {
 
 .wa-btn {
   z-index: 999;
-  width: 60px;
+  text-align: center;
+  justify-content: flex-start;
+  align-items: center;
+  width: 92px;
+  text-decoration: none;
+  transition: all .2s;
   position: fixed;
   bottom: 20px;
   right: 20px;
+}
+
+.wa-btn:hover {
+  transform: scale(1.05);
 }
 
 .banner-btn {
@@ -1661,6 +1682,25 @@ figcaption {
 
 .slide-nav {
   font-size: 12px;
+}
+
+.video {
+  border-radius: var(--border-radius--md);
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+}
+
+.wa-text {
+  color: #25d366;
+  margin-bottom: 10px;
+  font-size: 18px;
+  line-height: 18px;
+}
+
+.wa-icon {
+  width: 60px;
 }
 
 @media screen and (min-width: 1280px) {
@@ -2257,10 +2297,6 @@ figcaption {
     padding: 20px;
   }
 
-  .testimonial-item.one {
-    margin-top: 30px;
-  }
-
   .right-arrow {
     right: 43%;
   }
@@ -2416,6 +2452,10 @@ figcaption {
 
   .slider {
     height: 400px;
+  }
+
+  .video {
+    width: 100%;
   }
 }
 
@@ -2622,10 +2662,6 @@ figcaption {
     grid-row-gap: 30px;
   }
 
-  .testimonial-item.one {
-    margin-top: 0;
-  }
-
   .right-arrow {
     width: 35px;
     height: 35px;
@@ -2745,11 +2781,20 @@ figcaption {
   }
 
   .wa-btn {
-    width: 50px;
+    width: 82px;
   }
 
   .slider {
     height: 350px;
+  }
+
+  .wa-text {
+    margin-bottom: 5px;
+    font-size: 16px;
+  }
+
+  .wa-icon {
+    width: 50px;
   }
 }
 
@@ -3040,6 +3085,11 @@ figcaption {
 
   .play-state {
     font-size: 13px;
+  }
+
+  .wa-btn {
+    bottom: 10px;
+    right: 10px;
   }
 
   .banner-btn {
