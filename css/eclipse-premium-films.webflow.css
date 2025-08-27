@@ -1690,6 +1690,7 @@ figcaption {
   margin-left: auto;
   margin-right: auto;
   overflow: hidden;
+  opacity: 1 !important;
 }
 
 .wa-text {
