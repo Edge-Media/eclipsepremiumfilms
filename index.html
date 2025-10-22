@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--  This site was created in Webflow. https://webflow.com  --><!--  Last Published: Wed Oct 22 2025 03:44:13 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  This site was created in Webflow. https://webflow.com  --><!--  Last Published: Wed Oct 22 2025 04:33:15 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="68df7e01dca283f0f119b796" data-wf-site="681d74125457ff1ea6f9a60b" lang="en">
 <head>
   <meta charset="utf-8">
@@ -26,12 +26,10 @@
   <link href="images/webclip.jpg" rel="apple-touch-icon">
   <link href="https://eclipsepremiumfilms.com.sg" rel="canonical">
   <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-8R7VK2LYNX"></script>
-  <script type="text/javascript">window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('set', 'developer_id.dZGVlNj', true);gtag('config', 'G-8R7VK2LYNX');</script><!--  Google tag (gtag.js)  -->
-  <script async="" src="https://www.googletagmanager.com/gtag/js?id=AW-17511375968"></script>
+  <script type="text/javascript">window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('set', 'developer_id.dZGVlNj', true);gtag('config', 'G-8R7VK2LYNX');</script><!--  Google Ads connection  -->
   <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
   gtag('config', 'AW-17511375968');
 </script>
   <style>
@@ -641,23 +639,22 @@
   // Google Ads conversion trigger for WhatsApp
   function gtag_report_conversion(url) {
     console.log("✅ WhatsApp (.wa-btn) click detected — firing Google Ads conversion...");
-    alert("WhatsApp click detected! Sending conversion to Google Ads...");
     var callback = function () {
       console.log("🎯 Google Ads conversion successfully sent!");
-      alert("Google Ads conversion sent!");
       if (typeof(url) != 'undefined') {
         window.open(url, '_blank');
       }
     };
+    // Fire the conversion event
     gtag('event', 'conversion', {
-      'send_to': 'AW-17511375968/EuKZCJLMsLEbEODIiZ5B', // keep your own ID/label
+      'send_to': 'AW-17511375968/EuKZCJLMsLEbEODIiZ5B', // your conversion label
       'value': 1.0,
       'currency': 'SGD',
       'event_callback': callback
     });
     return false;
   }
-  // Detect .wa-btn clicks (safe for Webflow)
+  // Attach to .wa-btn clicks
   document.addEventListener('DOMContentLoaded', function() {
     var waButtons = document.querySelectorAll('.wa-btn');
     if (waButtons.length === 0) {
@@ -667,10 +664,9 @@
     }
     waButtons.forEach(function(btn) {
       btn.addEventListener('click', function(e) {
-        e.preventDefault(); // prevent instant redirect
+        e.preventDefault(); // stop immediate redirect
         var link = this.getAttribute('href');
         console.log("🟢 .wa-btn clicked:", link);
-        alert("WhatsApp button clicked!");
         gtag_report_conversion(link);
       });
     });
