@@ -543,7 +543,7 @@ figcaption {
 }
 
 .dropdown {
-  display: none;
+  display: block;
 }
 
 .dropdown-toggle {
@@ -721,10 +721,6 @@ figcaption {
 
 .nav-link-light:hover, .nav-link-light.w--current {
   color: var(--color--primary-2);
-}
-
-.icon {
-  margin-right: -20px;
 }
 
 .simple-navbar {
@@ -1832,10 +1828,6 @@ figcaption {
   color: var(--color--primary-1);
 }
 
-.tab-button.last, .tab-button-text.last {
-  border-right-style: none;
-}
-
 .type-img {
   border-radius: var(--border-radius--md);
   object-fit: cover;
@@ -1856,46 +1848,6 @@ figcaption {
 
 .tab-col-text {
   padding-left: 2%;
-}
-
-.testimonial-work-img {
-  border-top-left-radius: var(--border-radius--sm);
-  border-top-right-radius: var(--border-radius--md);
-  object-fit: cover;
-  width: 100%;
-  height: 35%;
-}
-
-.testimonial-item-wrap {
-  grid-column-gap: 10px;
-  grid-row-gap: 10px;
-  border-bottom-left-radius: var(--border-radius--md);
-  border-bottom-right-radius: var(--border-radius--md);
-  background-color: var(--color--white);
-  flex-flow: column;
-  justify-content: space-between;
-  align-items: stretch;
-  height: 67.5%;
-  padding: 30px;
-  display: flex;
-}
-
-.testimonial-slider-container {
-  background-color: var(--color--transparent);
-  justify-content: space-between;
-  width: 100%;
-  height: 820px;
-  padding-bottom: 100px;
-}
-
-.testimonial-pp-name {
-  display: flex;
-}
-
-.type-title {
-  margin-bottom: 0;
-  font-size: 26px;
-  line-height: 1.5em;
 }
 
 @media screen and (min-width: 1280px) {
@@ -2042,7 +1994,7 @@ figcaption {
     font-size: 18px;
   }
 
-  .price-text, .type-title {
+  .price-text {
     font-size: 30px;
   }
 }
@@ -2123,7 +2075,7 @@ figcaption {
     position: absolute;
   }
 
-  .price-text, .type-title {
+  .price-text {
     font-size: 36px;
   }
 }
@@ -2218,7 +2170,7 @@ figcaption {
     font-size: 16px;
   }
 
-  .price-text, .type-title {
+  .price-text {
     font-size: 40px;
   }
 }
@@ -2693,22 +2645,6 @@ figcaption {
   .type-row {
     display: block;
   }
-
-  .testimonial-item-wrap {
-    padding: 20px;
-  }
-
-  .testimonial-slider-container {
-    padding-bottom: 120px;
-  }
-
-  .testimonial-pp-name {
-    margin-bottom: 5px;
-  }
-
-  .type-title {
-    font-size: 24px;
-  }
 }
 
 @media screen and (max-width: 767px) {
@@ -3050,20 +2986,6 @@ figcaption {
   .wa-icon {
     width: 50px;
   }
-
-  .testimonial-work-img {
-    height: 250px;
-  }
-
-  .testimonial-item-wrap {
-    grid-column-gap: 30px;
-    grid-row-gap: 30px;
-  }
-
-  .testimonial-slider-container {
-    height: 660px;
-    padding-bottom: 80px;
-  }
 }
 
 @media screen and (max-width: 479px) {
@@ -3382,14 +3304,6 @@ figcaption {
 
   .tab-button {
     width: 50%;
-  }
-
-  .testimonial-slider-container {
-    height: 800px;
-  }
-
-  .type-title {
-    font-size: 22px;
   }
 }
 
