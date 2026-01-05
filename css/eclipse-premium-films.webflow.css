@@ -454,11 +454,14 @@ figcaption {
 }
 
 .container {
+  z-index: 3;
+  width: 90%;
   max-width: 1580px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 30px;
   padding-right: 30px;
+  position: relative;
 }
 
 .container.intro {
@@ -731,10 +734,10 @@ figcaption {
 }
 
 .hero-section {
-  background-image: url('../images/eclipse-banner-v1.jpg');
-  background-position: 50% 0;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-image: none;
+  background-position: 0 0;
+  background-repeat: repeat;
+  background-size: auto;
   flex-flow: column;
   justify-content: flex-end;
   align-items: stretch;
@@ -748,7 +751,7 @@ figcaption {
 .hero-title {
   color: var(--color--white);
   text-shadow: 0 0 3px #000c;
-  font-size: 60px;
+  line-height: 1.2em;
 }
 
 .hero-form-button-wrap {
@@ -762,8 +765,8 @@ figcaption {
 }
 
 .hero-overlay {
-  background-image: linear-gradient(0deg, var(--color--black), var(--color--black) 100%, var(--color--white) 0%);
-  opacity: .2;
+  z-index: 2;
+  background-color: #00000073;
   position: absolute;
   inset: 0%;
 }
@@ -792,7 +795,7 @@ figcaption {
   grid-column-gap: 50px;
   grid-row-gap: 50px;
   grid-template-rows: auto;
-  grid-template-columns: .75fr .5fr;
+  grid-template-columns: 1.25fr .5fr;
   position: relative;
 }
 
@@ -1617,7 +1620,7 @@ figcaption {
   justify-content: flex-start;
   align-items: center;
   width: 300px;
-  margin-top: 10px;
+  margin-top: 20px;
   padding: 5px 5px 5px 20px;
   font-family: Rubik, sans-serif;
   font-size: 16px;
@@ -1645,9 +1648,9 @@ figcaption {
   transform: scale(1.1);
 }
 
-.image {
+.banner-human-img {
   width: 300px;
-  display: block;
+  display: none;
   position: absolute;
   bottom: 0%;
   right: 17%;
@@ -1850,6 +1853,13 @@ figcaption {
   padding-left: 2%;
 }
 
+.banner-bg-video {
+  z-index: 1;
+  height: 100%;
+  position: absolute;
+  inset: 0%;
+}
+
 @media screen and (min-width: 1280px) {
   h1 {
     font-size: 60px;
@@ -1879,10 +1889,6 @@ figcaption {
 
   .section-spacing-bottom {
     padding-bottom: 100px;
-  }
-
-  .hero-title {
-    font-size: 64px;
   }
 
   .grid-hero {
@@ -2038,7 +2044,7 @@ figcaption {
   }
 
   .hero-title {
-    font-size: 68px;
+    font-size: 60px;
   }
 
   .grid-service-item {
@@ -2071,7 +2077,7 @@ figcaption {
     height: 700px;
   }
 
-  .image {
+  .banner-human-img {
     position: absolute;
   }
 
@@ -2158,7 +2164,7 @@ figcaption {
     padding-bottom: 100px;
   }
 
-  .image {
+  .banner-human-img {
     width: 360px;
   }
 
@@ -2609,7 +2615,7 @@ figcaption {
     padding-right: 20px;
   }
 
-  .image {
+  .banner-human-img {
     width: 260px;
     right: 5%;
   }
@@ -2792,10 +2798,6 @@ figcaption {
 
   .hero-form-title {
     font-size: 30px;
-  }
-
-  .hero-overlay {
-    opacity: .5;
   }
 
   .grid-hero {
@@ -3119,10 +3121,6 @@ figcaption {
     font-size: 26px;
   }
 
-  .hero-overlay {
-    opacity: .25;
-  }
-
   .hero-form-wrap {
     padding: 15px;
   }
@@ -3286,7 +3284,7 @@ figcaption {
     font-size: 14px;
   }
 
-  .image {
+  .banner-human-img {
     width: 210px;
   }
 
