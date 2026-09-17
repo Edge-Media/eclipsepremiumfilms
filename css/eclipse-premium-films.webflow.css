@@ -29,8 +29,8 @@
   --color--gray-3: #e5f1ff;
   --color--gray-1: #787878;
   --color--transparent: #0000;
-  --border-radius--form-input: 10px;
   --font-family--body: Satoshi, Georgia, sans-serif;
+  --border-radius--form-input: 10px;
 }
 
 .w-layout-blockcontainer {
@@ -290,9 +290,9 @@ figcaption {
   border: 1px solid var(--color--gray-2);
   border-radius: var(--border-radius--button);
   background-color: var(--color--gray-2);
-  color: var(--color--black);
   width: 100%;
   height: 50px;
+  color: var(--color--black);
   margin-bottom: 10px;
   padding: 10px 15px;
   font-size: 18px;
@@ -392,6 +392,13 @@ figcaption {
   margin-bottom: 0;
 }
 
+.no-margin.align-center {
+  text-align: center;
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .input-group {
   align-items: center;
   width: 100%;
@@ -406,9 +413,9 @@ figcaption {
   border: 1px solid var(--color--gray-2);
   border-radius: var(--border-radius--button);
   background-color: var(--color--gray-2);
-  color: var(--color--black);
   width: 100%;
   height: 50px;
+  color: var(--color--black);
   margin-bottom: 10px;
   padding-left: 15px;
   padding-right: 15px;
@@ -521,8 +528,8 @@ figcaption {
 }
 
 .dropdown-link {
-  color: var(--color--white);
   width: 100%;
+  color: var(--color--white);
   margin-top: 10px;
   margin-bottom: 10px;
   padding: 0;
@@ -896,7 +903,7 @@ figcaption {
 .service-counter-item {
   grid-column-gap: 50px;
   grid-row-gap: 50px;
-  border: 1px solid var(--color--gray-1);
+  border: 2px solid var(--color--primary-1);
   border-radius: var(--border-radius--md);
   background-color: var(--color--gray-3);
   background-image: linear-gradient(#00000059, #00000059), url('../images/services-measurements.jpg');
@@ -1055,6 +1062,14 @@ figcaption {
   margin-bottom: 0;
   font-size: 26px;
   line-height: 1.5em;
+}
+
+.service-title.align-center {
+  text-align: center;
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+  display: none;
 }
 
 .service-description {
@@ -1643,11 +1658,11 @@ figcaption {
   grid-row-gap: 10px;
   border-radius: var(--border-radius--sm);
   background-color: var(--color--primary-1);
+  width: 253px;
   color: var(--color--white);
   text-align: center;
   justify-content: flex-start;
   align-items: center;
-  width: 253px;
   margin-top: 20px;
   padding: 5px 5px 5px 20px;
   font-family: Rubik, sans-serif;
@@ -1761,8 +1776,8 @@ figcaption {
 .cookie-banner {
   z-index: 9999;
   background-color: var(--color--primary-1);
-  color: var(--color--white);
   width: 100%;
+  color: var(--color--white);
   padding: 15px;
   font-family: Rubik, sans-serif;
   font-size: 15px;
@@ -1830,7 +1845,7 @@ figcaption {
 }
 
 .tab-menu {
-  border-bottom: 2px solid var(--color--gray-2);
+  border-bottom: 2px solid #adc7ff;
   justify-content: center;
   align-items: center;
   display: flex;
@@ -1845,6 +1860,7 @@ figcaption {
   padding-right: 0;
   font-family: Poppins, sans-serif;
   transition: all .2s;
+  bottom: -1px;
 }
 
 .tab-button:hover {
@@ -1891,12 +1907,12 @@ figcaption {
   grid-column-gap: 10px;
   grid-row-gap: 10px;
   border-radius: var(--border-radius--sm);
+  width: 285px;
   color: var(--color--white);
   text-align: center;
   background-color: #25d366;
   justify-content: center;
   align-items: center;
-  width: 285px;
   margin-top: 40px;
   margin-left: auto;
   margin-right: auto;
@@ -1948,6 +1964,75 @@ figcaption {
 
 .text-bold {
   font-weight: 700;
+}
+
+.lb-gallery-wrap {
+  margin-top: 30px;
+}
+
+.lb-gallery {
+  border-radius: var(--border-radius--md);
+  width: 24%;
+  height: 160px;
+  margin-bottom: 10px;
+  margin-left: .5%;
+  margin-right: .5%;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.lb-gallery-text {
+  font-family: var(--font-family--body);
+  color: var(--color--white);
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 0;
+  position: absolute;
+  bottom: 0%;
+  left: 15px;
+  right: 15px;
+}
+
+.lb-gallery-text.align-center {
+  text-align: center;
+}
+
+.lb-gallery-overlay {
+  background-image: linear-gradient(0deg, #000c 10%, #0000 45%);
+  position: absolute;
+  inset: 0%;
+}
+
+.lb-gallery-title {
+  color: var(--color--white);
+  text-align: center;
+  margin-bottom: 0;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5em;
+  position: absolute;
+  bottom: 8px;
+  left: 10px;
+  right: 10px;
+}
+
+.lb-gallery-title.align-center {
+  text-align: center;
+}
+
+.gallery-img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.gallery-img.bottom-focus {
+  object-position: 50% 100%;
+}
+
+.gallery-section.section-spacing {
+  background-color: var(--color--gray-3);
 }
 
 @media screen and (min-width: 1280px) {
@@ -2094,7 +2179,7 @@ figcaption {
     font-size: 18px;
   }
 
-  .price-text {
+  .price-text, .lb-gallery-text {
     font-size: 30px;
   }
 }
@@ -2186,6 +2271,14 @@ figcaption {
   .banner-logo-img {
     position: absolute;
   }
+
+  .lb-gallery-text {
+    font-size: 36px;
+  }
+
+  .lb-gallery-title {
+    font-size: 20px;
+  }
 }
 
 @media screen and (min-width: 1920px) {
@@ -2225,7 +2318,6 @@ figcaption {
   }
 
   .service-counter-item {
-    border: 2px solid var(--color--primary-1);
     height: 200px;
     position: relative;
     overflow: hidden;
@@ -2291,6 +2383,14 @@ figcaption {
   .price-text {
     font-size: 40px;
   }
+
+  .lb-gallery {
+    height: 200px;
+  }
+
+  .lb-gallery-text {
+    font-size: 40px;
+  }
 }
 
 @media screen and (max-width: 991px) {
@@ -2333,6 +2433,10 @@ figcaption {
 
   .no-margin {
     align-self: auto;
+  }
+
+  .no-margin.align-center {
+    width: 100%;
   }
 
   .heading-h3 {
@@ -2580,6 +2684,10 @@ figcaption {
     font-size: 24px;
   }
 
+  .service-title.align-center {
+    width: 100%;
+  }
+
   .service-section-title-wrap {
     grid-column-gap: 20px;
     grid-row-gap: 20px;
@@ -2787,6 +2895,14 @@ figcaption {
     top: 4%;
     right: -6%;
   }
+
+  .lb-gallery {
+    width: 32.3%;
+  }
+
+  .lb-gallery-text {
+    font-size: 24px;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -2855,6 +2971,10 @@ figcaption {
   .container-medium {
     padding-left: 15px;
     padding-right: 15px;
+  }
+
+  .no-margin.align-center {
+    display: none;
   }
 
   .input-group {
@@ -3152,6 +3272,15 @@ figcaption {
 
   .banner-logo-img {
     display: none;
+  }
+
+  .lb-gallery-wrap {
+    margin-top: 0;
+  }
+
+  .lb-gallery {
+    width: 49%;
+    margin-bottom: 0;
   }
 }
 
@@ -3484,6 +3613,16 @@ figcaption {
   .section-btn {
     width: 270px;
     font-size: 17px;
+  }
+
+  .lb-gallery {
+    width: 100%;
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+
+  .lb-gallery-text {
+    font-size: 22px;
   }
 }
 
