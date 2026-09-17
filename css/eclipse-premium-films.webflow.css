@@ -1967,14 +1967,16 @@ figcaption {
 }
 
 .lb-gallery-wrap {
+  justify-content: center;
+  align-items: flex-start;
   margin-top: 30px;
+  display: flex;
 }
 
 .lb-gallery {
   border-radius: var(--border-radius--md);
-  width: 24%;
+  width: 23.5%;
   height: 160px;
-  margin-bottom: 10px;
   margin-left: .5%;
   margin-right: .5%;
   text-decoration: none;
@@ -2896,8 +2898,13 @@ figcaption {
     right: -6%;
   }
 
+  .lb-gallery-wrap {
+    flex-flow: wrap;
+  }
+
   .lb-gallery {
-    width: 32.3%;
+    width: 48.5%;
+    margin-bottom: 10px;
   }
 
   .lb-gallery-text {
@@ -3276,11 +3283,6 @@ figcaption {
 
   .lb-gallery-wrap {
     margin-top: 0;
-  }
-
-  .lb-gallery {
-    width: 49%;
-    margin-bottom: 0;
   }
 }
 
